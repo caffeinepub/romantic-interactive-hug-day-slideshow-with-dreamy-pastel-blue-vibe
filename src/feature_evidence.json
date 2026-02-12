@@ -1,0 +1,144 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-responsive-interactive-slideshow-for-hug-day-with-soft-fade-slide-transitions-between-slides-and-a-cohesive-dreamy-romantic-vibe-using-light-blue-and-pastel-tones",
+      "featureTitle": "Create a single-page, responsive interactive slideshow for “Hug Day” with soft fade/slide transitions between slides and a cohesive dreamy romantic vibe using light blue and pastel tones.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/slideshow/Slideshow.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/HugDaySlideshowPage.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-main-scene-slide-content-to-match-the-provided-description-an-outdoor-location-filled-with-pretty-blue-flowers-a-couple-standing-close-and-hugging-lovingly-girl-dark-brown-hair-beautiful-blue-princess-gown-boy-black-hair-sky-blue-shirt-overlay-the-headline-text-above-the-couple-happy-hug-day-in-a-large-elegant-romantic-font-and-show-the-bottom-note-cant-hug-u-physically-right-now-so-sending-u-the-virtual-ones",
+      "featureTitle": "Implement the main scene slide content to match the provided description: an outdoor location filled with pretty blue flowers, a couple standing close and hugging lovingly (girl: dark brown hair, beautiful blue princess gown; boy: black hair, sky-blue shirt). Overlay the headline text above the couple: “HAPPY HUG DAY” in a large elegant romantic font, and show the bottom note: “Cant hug u physically right now so sending u the virtual ones”.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/slideshow/slides/HugDaySceneSlide.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-interactive-slideshow-controls-next-and-previous-buttons-with-accessible-labels-keyboard-support-left-right-arrow-or-tab-enter-and-disabled-or-wrapped-behavior-at-the-ends-choose-one-and-implement-consistently",
+      "featureTitle": "Add interactive slideshow controls: Next and Previous buttons with accessible labels, keyboard support (Left/Right arrow or Tab + Enter), and disabled or wrapped behavior at the ends (choose one and implement consistently).",
+      "files": [
+        "frontend/src/components/slideshow/Slideshow.tsx",
+        "frontend/src/components/slideshow/SlideshowControls.tsx",
+        "frontend/src/components/slideshow/useSlideshowNavigation.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-smooth-fade-in-animation-for-on-screen-text-headline-and-bottom-note-when-the-slide-appears-synchronized-with-the-slide-transition-for-a-soft-romantic-feel",
+      "featureTitle": "Add smooth fade-in animation for on-screen text (headline and bottom note) when the slide appears, synchronized with the slide transition for a soft romantic feel.",
+      "files": [
+        "frontend/src/components/slideshow/SlideTextOverlay.tsx",
+        "frontend/src/components/slideshow/slides/HugDaySceneSlide.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-ambient-romantic-effects-on-the-slideshow-page-floating-heart-animations-soft-glowing-effects-and-gentle-flower-petal-animations-in-the-background-that-do-not-obstruct-readability-of-the-main-text",
+      "featureTitle": "Implement ambient romantic effects on the slideshow page: floating heart animations, soft glowing effects, and gentle flower/petal animations in the background that do not obstruct readability of the main text.",
+      "files": [
+        "frontend/src/components/effects/AmbientRomanceEffects.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/HugDaySlideshowPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-optional-soft-romantic-instrumental-background-music-with-a-visible-toggle-button-play-pause-ensure-the-default-behavior-does-not-violate-typical-browser-autoplay-restrictions-user-interaction-required-before-playback",
+      "featureTitle": "Add optional soft romantic instrumental background music with a visible toggle button (play/pause). Ensure the default behavior does not violate typical browser autoplay restrictions (user interaction required before playback).",
+      "files": [
+        "frontend/src/components/music/MusicToggle.tsx",
+        "frontend/src/pages/HugDaySlideshowPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-generated-static-image-assets-needed-for-the-scene-and-effects-under-frontend-public-assets-generated-and-wire-them-into-the-slideshow-do-not-serve-images-through-the-backend",
+      "featureTitle": "Add generated static image assets needed for the scene and effects under frontend/public/assets/generated and wire them into the slideshow (do not serve images through the backend).",
+      "files": [
+        "frontend/src/components/effects/AmbientRomanceEffects.tsx",
+        "frontend/src/components/slideshow/slides/HugDaySceneSlide.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

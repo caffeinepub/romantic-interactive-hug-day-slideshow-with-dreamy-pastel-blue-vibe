@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the HugDaySlideshowPage as the single-page view.",
+  "frontend/src/pages/HugDaySlideshowPage.tsx": "Primary page component orchestrating the slideshow with ambient effects, music toggle, and footer attribution.",
+  "frontend/src/components/slideshow/Slideshow.tsx": "Reusable slideshow container managing slide transitions with fade/slide animations and navigation controls.",
+  "frontend/src/components/slideshow/SlideshowControls.tsx": "Previous/Next navigation buttons with accessible labels, disabled states, and romantic glassmorphism styling.",
+  "frontend/src/components/slideshow/useSlideshowNavigation.ts": "Custom hook encapsulating slideshow navigation logic and keyboard arrow key support.",
+  "frontend/src/components/slideshow/slides/IntroSlide.tsx": "Welcome intro slide with animated text overlay and gradient background.",
+  "frontend/src/components/slideshow/slides/HugDaySceneSlide.tsx": "Main scene slide displaying the hugging couple artwork with \"HAPPY HUG DAY\" headline and bottom sweet note text.",
+  "frontend/src/components/slideshow/SlideTextOverlay.tsx": "Reusable text overlay component with smooth fade-in-up animation for headlines and subtexts.",
+  "frontend/src/components/effects/AmbientRomanceEffects.tsx": "Ambient particle effects layer rendering floating hearts, drifting petals, and soft glow animations.",
+  "frontend/src/components/music/MusicToggle.tsx": "Music control button with play/pause toggle for optional romantic instrumental background audio.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks (intentionally minimal as backend has no methods).",
+  "frontend/src/index.css": "Global styles with romantic pastel blue OKLCH color palette, custom fonts (Great Vibes, Playfair Display, Poppins), and animation keyframes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with romantic color tokens, custom animations, and increased border radius for soft aesthetic.",
+  "frontend/index.html": "HTML entry point with romantic title and Google Fonts preconnect links."
+}

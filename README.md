@@ -1,2 +1,3 @@
-# romantic-interactive-hug-day-slideshow-with-dreamy-pastel-blue-vibe
-Exported from Caffeine project: Romantic interactive Hug Day slideshow with dreamy pastel blue vibe
+## Romantic interactive Hug Day slideshow with dreamy pastel blue vibe
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

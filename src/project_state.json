@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a romantic, interactive “Hug Day” slideshow webpage with a dreamy pastel blue vibe, couple-hugging scene, animated text, interactive controls, optional background music toggle, and responsive design.",
+  "architectural_notes": [
+    "Implement as single-page web app using HTML/CSS/JS (or React if preferred) with responsive mobile-first layout."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Romantic outdoor illustration with a hugging couple among abundant blue flowers; girl has dark brown hair and a blue princess gown; boy has black hair and a sky-blue shirt (hug-day-scene.dim_1920x1080.png)\n- Soft semi-transparent heart shape/icon suitable for floating animation overlay, pastel pink/red tone (heart-particle.dim_128x128.png)\n- Single flower petal or small flower particle sprite in soft pastel blue/white for drifting animation (petal-particle.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-responsive-interactive-slideshow-for-hug-day-with-soft-fade-slide-transitions-between-slides-and-a-cohesive-dreamy-romantic-vibe-using-light-blue-and-pastel-tones",
+      "title": "Create a single-page, responsive interactive slideshow for “Hug Day” with soft fade/slide transitions between slides and a cohesive dreamy romantic vibe using light blue and pastel tones.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-main-scene-slide-content-to-match-the-provided-description-an-outdoor-location-filled-with-pretty-blue-flowers-a-couple-standing-close-and-hugging-lovingly-girl-dark-brown-hair-beautiful-blue-princess-gown-boy-black-hair-sky-blue-shirt-overlay-the-headline-text-above-the-couple-happy-hug-day-in-a-large-elegant-romantic-font-and-show-the-bottom-note-cant-hug-u-physically-right-now-so-sending-u-the-virtual-ones",
+      "title": "Implement the main scene slide content to match the provided description: an outdoor location filled with pretty blue flowers, a couple standing close and hugging lovingly (girl: dark brown hair, beautiful blue princess gown; boy: black hair, sky-blue shirt). Overlay the headline text above the couple: “HAPPY HUG DAY” in a large elegant romantic font, and show the bottom note: “Cant hug u physically right now so sending u the virtual ones”.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-interactive-slideshow-controls-next-and-previous-buttons-with-accessible-labels-keyboard-support-left-right-arrow-or-tab-enter-and-disabled-or-wrapped-behavior-at-the-ends-choose-one-and-implement-consistently",
+      "title": "Add interactive slideshow controls: Next and Previous buttons with accessible labels, keyboard support (Left/Right arrow or Tab + Enter), and disabled or wrapped behavior at the ends (choose one and implement consistently).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-smooth-fade-in-animation-for-on-screen-text-headline-and-bottom-note-when-the-slide-appears-synchronized-with-the-slide-transition-for-a-soft-romantic-feel",
+      "title": "Add smooth fade-in animation for on-screen text (headline and bottom note) when the slide appears, synchronized with the slide transition for a soft romantic feel.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-ambient-romantic-effects-on-the-slideshow-page-floating-heart-animations-soft-glowing-effects-and-gentle-flower-petal-animations-in-the-background-that-do-not-obstruct-readability-of-the-main-text",
+      "title": "Implement ambient romantic effects on the slideshow page: floating heart animations, soft glowing effects, and gentle flower/petal animations in the background that do not obstruct readability of the main text.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-optional-soft-romantic-instrumental-background-music-with-a-visible-toggle-button-play-pause-ensure-the-default-behavior-does-not-violate-typical-browser-autoplay-restrictions-user-interaction-required-before-playback",
+      "title": "Add optional soft romantic instrumental background music with a visible toggle button (play/pause). Ensure the default behavior does not violate typical browser autoplay restrictions (user interaction required before playback).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-image-assets-needed-for-the-scene-and-effects-under-frontend-public-assets-generated-and-wire-them-into-the-slideshow-do-not-serve-images-through-the-backend",
+      "title": "Add generated static image assets needed for the scene and effects under frontend/public/assets/generated and wire them into the slideshow (do not serve images through the backend).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create Hug Day romantic slideshow webpage with dreamy pastel blue styling and soft transitions (fade/slide).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement slide content: outdoor blue-flower scene with hugging couple (girl: dark brown hair, blue princess gown; boy: black hair, sky-blue shirt) plus on-screen texts (“HAPPY HUG DAY” and bottom sweet note).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add interactivity: Next/Previous controls and smooth fade-in text animation.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add ambient effects: floating hearts, soft glow, and gentle flower/petal background animations.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add optional romantic instrumental background music with a toggle and ensure mobile-responsive layout.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Romantic interactive Hug Day slideshow with dreamy pastel blue vibe",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

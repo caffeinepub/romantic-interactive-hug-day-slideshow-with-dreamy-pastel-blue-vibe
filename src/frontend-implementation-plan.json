@@ -1,0 +1,218 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Hug Day romantic interactive slideshow (dreamy pastel blue)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a single-page responsive Hug Day slideshow with soft transitions and a cohesive dreamy pastel blue theme.",
+      "acceptanceCriteria": [
+        "The app renders a slideshow view with at least 2 slides and a visible transition (fade or slide) when navigating.",
+        "Layout adapts for mobile screens (no horizontal overflow; text and controls remain readable and tappable).",
+        "Color palette and styling consistently reflect light blue/pastel romantic theme."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page app shell that renders the Hug Day slideshow as the primary view (no additional routes), applying the dreamy pastel blue layout framing and ensuring mobile-first responsiveness."
+        },
+        {
+          "path": "frontend/src/pages/HugDaySlideshowPage.tsx",
+          "operation": "create",
+          "description": "Implement the main single-page slideshow view with at least 2 slides, including a soft fade/slide transition between slides and responsive layout constraints (avoid horizontal overflow, keep controls readable/tappable)."
+        },
+        {
+          "path": "frontend/src/components/slideshow/Slideshow.tsx",
+          "operation": "create",
+          "description": "Create a reusable slideshow container component that handles slide rendering, active slide state, and transition orchestration (fade or slide) for a soft romantic feel."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global theme styling for a dreamy romantic light-blue/pastel palette (background gradients, typography defaults, safe-area padding, and responsive text sizing)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with project-specific pastel blue/pink tokens and custom keyframes/animations needed for slideshow transitions and ambient effects."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement the main scene slide with the specified hugging couple artwork and exact headline/note text with elegant romantic typography.",
+      "acceptanceCriteria": [
+        "The slide shows the specified headline text “HAPPY HUG DAY” above the couple and the exact bottom note text.",
+        "Typography for the headline is visually distinct (elegant/romantic) and larger than other text.",
+        "Scene artwork clearly includes blue flowers and the described couple styling (hair colors and clothing colors)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/slideshow/slides/HugDaySceneSlide.tsx",
+          "operation": "create",
+          "description": "Create the main scene slide using the static generated artwork (background/scene) and overlay the exact texts: headline “HAPPY HUG DAY” (large elegant romantic styling) and bottom note “Cant hug u physically right now so sending u the virtual ones”, positioned for readability across breakpoints."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add an elegant romantic display font (e.g., via a web font link) to support the distinctive headline typography, while keeping body text readable on mobile."
+        },
+        {
+          "path": "frontend/public/assets/generated/hug-day-scene.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated static scene image asset exactly as specified, for direct frontend use (no backend delivery)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add accessible interactive slideshow controls (Next/Previous) with keyboard support and consistent end behavior.",
+      "acceptanceCriteria": [
+        "Next and Previous buttons navigate between slides on click/tap.",
+        "Controls are usable on mobile (minimum comfortable tap size) and on desktop (keyboard operable).",
+        "Navigation behavior at first/last slide is consistent (either wrap-around or disables appropriately)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/slideshow/SlideshowControls.tsx",
+          "operation": "create",
+          "description": "Implement Next/Previous controls with accessible labels (aria-label), comfortable tap targets, and consistent wrap-around or disabled-at-ends behavior (choose one and apply consistently)."
+        },
+        {
+          "path": "frontend/src/components/slideshow/useSlideshowNavigation.ts",
+          "operation": "create",
+          "description": "Add a small hook to encapsulate slideshow navigation rules (next/prev, wrap/disable decision) and keyboard handlers (Left/Right arrows; Tab + Enter supported by native buttons)."
+        },
+        {
+          "path": "frontend/src/components/slideshow/Slideshow.tsx",
+          "operation": "modify",
+          "description": "Wire the controls and keyboard support into the slideshow container, ensuring focus states are visible and that navigation remains responsive during transitions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Animate headline and bottom note with smooth fade-in when a slide becomes active, synchronized with slide transitions.",
+      "acceptanceCriteria": [
+        "When a slide becomes active, its headline and note fade in smoothly (no sudden pop-in).",
+        "Text animation does not block navigation (buttons remain responsive during animation)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/slideshow/SlideTextOverlay.tsx",
+          "operation": "create",
+          "description": "Create a text overlay component for headline/note that applies a smooth fade-in (and optional slight upward drift) on activation, without capturing pointer events that would interfere with navigation."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS (or Tailwind utility usage) for text fade-in keyframes and timing tuned to match the slide transition duration for a soft romantic feel."
+        },
+        {
+          "path": "frontend/src/components/slideshow/slides/HugDaySceneSlide.tsx",
+          "operation": "modify",
+          "description": "Use the shared text overlay animation for the “HAPPY HUG DAY” headline and bottom note so they fade in smoothly when the slide becomes active."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add ambient romantic effects: floating hearts, soft glow, and gentle petal/flower background motion without obstructing text readability.",
+      "acceptanceCriteria": [
+        "Hearts float upward (or drift) continuously with a soft, lightweight animation.",
+        "Background includes subtle glow and petal/flower motion elements.",
+        "Effects maintain legibility: headline and note remain clearly readable on top of the scene."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/effects/AmbientRomanceEffects.tsx",
+          "operation": "create",
+          "description": "Implement ambient overlay effects: multiple floating heart particles and drifting petal/flower particles, plus a subtle glow layer, with z-index/opacity tuned to preserve readability of headline and note."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add keyframes for floating/drifting particle motion and glow pulsing; ensure animations are lightweight (transform/opacity) and respect reduced-motion preferences."
+        },
+        {
+          "path": "frontend/public/assets/generated/heart-particle.dim_128x128.png",
+          "operation": "create",
+          "description": "Add the generated heart particle sprite exactly as specified for floating overlay animation."
+        },
+        {
+          "path": "frontend/public/assets/generated/petal-particle.dim_128x128.png",
+          "operation": "create",
+          "description": "Add the generated petal/flower particle sprite exactly as specified for gentle drifting background animation."
+        },
+        {
+          "path": "frontend/src/pages/HugDaySlideshowPage.tsx",
+          "operation": "modify",
+          "description": "Wire the AmbientRomanceEffects overlay into the slideshow page behind text overlays/controls (or positioned to avoid blocking) and ensure it scales appropriately on mobile."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add optional romantic instrumental background music with a visible play/pause toggle that requires user interaction to start.",
+      "acceptanceCriteria": [
+        "A music toggle control is visible and works (play/pause).",
+        "Music does not start automatically until the user interacts (e.g., presses play).",
+        "Music state (playing/paused) is reflected in the UI."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/music/MusicToggle.tsx",
+          "operation": "create",
+          "description": "Implement a visible play/pause toggle that controls an HTMLAudioElement; ensure playback only starts after explicit user interaction and that UI state reflects playing/paused."
+        },
+        {
+          "path": "frontend/src/pages/HugDaySlideshowPage.tsx",
+          "operation": "modify",
+          "description": "Place and wire the MusicToggle control within the slideshow page UI (non-intrusive placement; accessible label; mobile-friendly tap size)."
+        },
+        {
+          "path": "frontend/public/assets/audio/romantic-instrumental.mp3",
+          "operation": "create",
+          "description": "Add a local romantic instrumental audio file to be used by the music toggle (static frontend asset; no streaming integrations)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add required generated static images under frontend/public/assets/generated and wire them into the slideshow and effects (frontend-only).",
+      "acceptanceCriteria": [
+        "All required generated images exist in frontend/public/assets/generated.",
+        "The slideshow uses these static assets directly from the frontend build output.",
+        "No backend endpoints are used for image delivery."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hug-day-scene.dim_1920x1080.png",
+          "operation": "modify",
+          "description": "Ensure the generated scene image exists at the exact required path/name and is used directly as a static frontend asset."
+        },
+        {
+          "path": "frontend/public/assets/generated/heart-particle.dim_128x128.png",
+          "operation": "modify",
+          "description": "Ensure the generated heart particle image exists at the exact required path/name and is used directly by the floating hearts effect."
+        },
+        {
+          "path": "frontend/public/assets/generated/petal-particle.dim_128x128.png",
+          "operation": "modify",
+          "description": "Ensure the generated petal particle image exists at the exact required path/name and is used directly by the drifting petal/flower effect."
+        },
+        {
+          "path": "frontend/src/components/slideshow/slides/HugDaySceneSlide.tsx",
+          "operation": "modify",
+          "description": "Wire the static generated scene asset at frontend/public/assets/generated/hug-day-scene.dim_1920x1080.png into the slide’s artwork rendering (no backend image delivery)."
+        },
+        {
+          "path": "frontend/src/components/effects/AmbientRomanceEffects.tsx",
+          "operation": "modify",
+          "description": "Wire the static generated particle assets at frontend/public/assets/generated/heart-particle.dim_128x128.png and frontend/public/assets/generated/petal-particle.dim_128x128.png into the ambient animation layers (no backend image delivery)."
+        }
+      ]
+    }
+  ]
+}

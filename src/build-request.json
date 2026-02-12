@@ -1,0 +1,161 @@
+{
+  "kind": "build_request",
+  "title": "Romantic interactive Hug Day slideshow with dreamy pastel blue vibe",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page, responsive interactive slideshow for “Hug Day” with soft fade/slide transitions between slides and a cohesive dreamy romantic vibe using light blue and pastel tones.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create a romantic, interactive slideshow webpage for “Hug Day”.\nThe slideshow should have soft animations (fade or slide transitions) and a dreamy romantic vibe with light blue and pastel tones."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The app renders a slideshow view with at least 2 slides and a visible transition (fade or slide) when navigating.",
+        "Layout adapts for mobile screens (no horizontal overflow; text and controls remain readable and tappable).",
+        "Color palette and styling consistently reflect light blue/pastel romantic theme."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the main scene slide content to match the provided description: an outdoor location filled with pretty blue flowers, a couple standing close and hugging lovingly (girl: dark brown hair, beautiful blue princess gown; boy: black hair, sky-blue shirt). Overlay the headline text above the couple: “HAPPY HUG DAY” in a large elegant romantic font, and show the bottom note: “Cant hug u physically right now so sending u the virtual ones”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Scene details:\nA couple hugging in a beautiful outdoor location filled with pretty blue flowers.\nThe girl has dark brown hair and is wearing a beautiful blue princess gown.\nThe boy has black hair and is wearing a sky-blue shirt.\nThey are standing close and hugging lovingly.\nText above their heads should say:\n\"HAPPY HUG DAY\" (large, elegant romantic font).\nAt the bottom of the screen, add a small sweet note that says:\n\"Cant hug u physically right now so sending u the virtual ones\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "The slide shows the specified headline text “HAPPY HUG DAY” above the couple and the exact bottom note text.",
+        "Typography for the headline is visually distinct (elegant/romantic) and larger than other text.",
+        "Scene artwork clearly includes blue flowers and the described couple styling (hair colors and clothing colors)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add interactive slideshow controls: Next and Previous buttons with accessible labels, keyboard support (Left/Right arrow or Tab + Enter), and disabled or wrapped behavior at the ends (choose one and implement consistently).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Make the slideshow interactive with:\nNext and Previous buttons"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Next and Previous buttons navigate between slides on click/tap.",
+        "Controls are usable on mobile (minimum comfortable tap size) and on desktop (keyboard operable).",
+        "Navigation behavior at first/last slide is consistent (either wrap-around or disables appropriately)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add smooth fade-in animation for on-screen text (headline and bottom note) when the slide appears, synchronized with the slide transition for a soft romantic feel.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Smooth fade-in text animation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "When a slide becomes active, its headline and note fade in smoothly (no sudden pop-in).",
+        "Text animation does not block navigation (buttons remain responsive during animation)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement ambient romantic effects on the slideshow page: floating heart animations, soft glowing effects, and gentle flower/petal animations in the background that do not obstruct readability of the main text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Floating heart animations\nAdd soft glowing effects and gentle flower or petal animations in the background."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hearts float upward (or drift) continuously with a soft, lightweight animation.",
+        "Background includes subtle glow and petal/flower motion elements.",
+        "Effects maintain legibility: headline and note remain clearly readable on top of the scene."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add optional soft romantic instrumental background music with a visible toggle button (play/pause). Ensure the default behavior does not violate typical browser autoplay restrictions (user interaction required before playback).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Soft background music (romantic instrumental, optional toggle button)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A music toggle control is visible and works (play/pause).",
+        "Music does not start automatically until the user interacts (e.g., presses play).",
+        "Music state (playing/paused) is reflected in the UI."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add generated static image assets needed for the scene and effects under frontend/public/assets/generated and wire them into the slideshow (do not serve images through the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "A couple hugging in a beautiful outdoor location filled with pretty blue flowers."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images exist in frontend/public/assets/generated.",
+        "The slideshow uses these static assets directly from the frontend build output.",
+        "No backend endpoints are used for image delivery."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (Shadcn UI sources must be composed, not edited).",
+    "Do not edit frontend/src/hooks/useInternetIdentity.ts or frontend/src/hooks/useActor.ts; if authentication is not needed, do not add it.",
+    "Keep the backend as a single Motoko actor; do not introduce additional backend services."
+  ],
+  "nonGoals": [
+    "User authentication (Internet Identity) and any account system.",
+    "Persisting slideshow state to the backend.",
+    "Third-party music streaming integrations (e.g., Spotify, YouTube).",
+    "Real-time features (chat, live presence, websockets)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Romantic outdoor illustration with a hugging couple among abundant blue flowers; girl has dark brown hair and a blue princess gown; boy has black hair and a sky-blue shirt (hug-day-scene.dim_1920x1080.png)",
+      "Soft semi-transparent heart shape/icon suitable for floating animation overlay, pastel pink/red tone (heart-particle.dim_128x128.png)",
+      "Single flower petal or small flower particle sprite in soft pastel blue/white for drifting animation (petal-particle.dim_128x128.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
